@@ -1,5 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import keralaKid1 from '../assets/kerala_kid_1.png';
+import keralaKid2 from '../assets/kerala_kid_2.png';
+import bondlynLogo from '../assets/bondlyn_logo.png';
+import puzzleSage from '../assets/puzzle_piece_sage.png';
+import puzzleBlue from '../assets/puzzle_piece_blue.png';
+import puzzleYellow from '../assets/puzzle_piece_yellow.png';
 
 export default function WhoWeAreSection() {
   return (
@@ -16,28 +22,28 @@ export default function WhoWeAreSection() {
         >
           {/* Inner Grid */}
           <div className="wwa-grid-item">
-            <img src="/src/assets/kerala_kid_1.png" alt="Happy child" />
+            <img src={keralaKid1} alt="Happy child" />
           </div>
           <div className="wwa-grid-item wwa-bg-sage"></div>
           <div className="wwa-grid-item wwa-bg-blue"></div>
           <div className="wwa-grid-item">
-            <img src="/src/assets/kerala_kid_2.png" alt="Laughing child" />
+            <img src={keralaKid2} alt="Laughing child" />
           </div>
 
           {/* Center Logo Bubble */}
           <div className="wwa-center-logo">
-            <img src="/src/assets/bondlyn_logo.png" alt="Bondlyn Logo" />
+            <img src={bondlynLogo} alt="Bondlyn Logo" />
           </div>
 
           {/* Floating Puzzle Pieces (3D Images) */}
           <div className="wwa-float-puzzle wwa-puzzle-1">
-            <img src="/src/assets/puzzle_piece_sage.png" alt="Sage Puzzle Piece" />
+            <img src={puzzleSage} alt="Sage Puzzle Piece" />
           </div>
           <div className="wwa-float-puzzle wwa-puzzle-2">
-            <img src="/src/assets/puzzle_piece_blue.png" alt="Blue Puzzle Piece" />
+            <img src={puzzleBlue} alt="Blue Puzzle Piece" />
           </div>
           <div className="wwa-float-puzzle wwa-puzzle-3">
-            <img src="/src/assets/puzzle_piece_yellow.png" alt="Yellow Puzzle Piece" />
+            <img src={puzzleYellow} alt="Yellow Puzzle Piece" />
           </div>
         </motion.div>
 

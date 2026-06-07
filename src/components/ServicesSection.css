@@ -51,16 +51,18 @@
 
 @keyframes scrollHintSpring {
   0% { transform: translateX(0); }
-  15% { transform: translateX(-15px); }
-  30% { transform: translateX(10px); }
-  45% { transform: translateX(-5px); }
-  60% { transform: translateX(2px); }
-  75% { transform: translateX(0); }
+  12% { transform: translateX(-40px); } /* Stronger initial pull */
+  24% { transform: translateX(25px); }  /* Aggressive rebound */
+  36% { transform: translateX(-15px); } /* Bounce back */
+  48% { transform: translateX(8px); }   /* Bounce right */
+  60% { transform: translateX(-4px); }   /* Settle left */
+  72% { transform: translateX(2px); }    /* Settle right */
+  84% { transform: translateX(0); }      /* Calm down */
   100% { transform: translateX(0); }
 }
 
 .hint-scroll-anim {
-  animation: scrollHintSpring 2s ease-in-out 0.4s; /* Trigger at 0.4s after class is added */
+  animation: scrollHintSpring 2.8s ease-in-out 0.4s; /* Trigger at 0.4s after class is added, last longer (2.8s) */
 }
 
 .service-card {

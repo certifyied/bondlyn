@@ -1,13 +1,23 @@
 import React from 'react';
+import { useModal } from '../context/ModalContext';
+import { motion } from 'framer-motion';
 import './CtaBlock.css';
 
 export default function CtaBlock() {
+  const { openModal } = useModal();
+
   return (
     <div className="cta-wrapper">
       <div className="cta-container">
         
         {/* Graphics Section */}
-        <div className="cta-graphics">
+        <motion.div 
+          className="cta-graphics"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="cta-shape cta-orange-half anim-cta-float"></div>
           
           <div className="cta-shape cta-green-rect anim-cta-pulse" style={{ animationName: 'none', transform: 'rotate(-30deg)' }}></div>
@@ -40,20 +50,32 @@ export default function CtaBlock() {
           {/* Sparkles */}
           <div className="cta-shape cta-sparkle" style={{ top: '25%', left: '20%', transform: 'scale(0.5)' }}></div>
           <div className="cta-shape cta-sparkle" style={{ top: '55%', left: '45%', transform: 'scale(0.6)' }}></div>
-        </div>
+        </motion.div>
 
         {/* Content Section */}
-        <div className="cta-content">
+        <motion.div 
+          className="cta-content"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
           <h2 className="cta-title">Your Child's Best Days<br />Are Still Ahead.</h2>
           <p className="cta-subtitle">
             Bondlyn is here to help make them happen.<br />
             Let's start with a simple conversation.
           </p>
           <div className="cta-buttons">
-            <button className="btn-cta-primary">Book a Consultation</button>
-            <button className="btn-cta-secondary">Call Us Today</button>
+            <button className="btn-cta-primary" onClick={openModal}>Book a Consultation</button>
+            <a 
+              href="tel:+918078556606" 
+              className="btn-cta-secondary"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
+            >
+              Call Us Today
+            </a>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import joyfulBoy from '../assets/joyful_boy.png';
 import joyfulGirl from '../assets/joyful_girl.png';
+import { useModal } from '../context/ModalContext';
 
 function FadeUpText({ text, delayStart = 0 }) {
   return (
@@ -22,9 +23,11 @@ function FadeUpText({ text, delayStart = 0 }) {
 }
 
 export default function HeroSection() {
+  const { openModal } = useModal();
+
   return (
-    <section className="hero-container">
-      <div className="hero-content">
+    <section className="section-wrapper section-split hero-container">
+      <div className="section-content hero-content">
         <h1 className="hero-title">
           <FadeUpText text="Every " delayStart={0} />
           <span className="highlight-swish">
@@ -44,8 +47,16 @@ export default function HeroSection() {
           support, every child can grow, connect, and thrive.
         </p>
         <div className="hero-buttons fade-up delay-2">
-          <button className="btn btn-primary">Explore Our Services</button>
-          <button className="btn btn-outline">Book Your Free Initial Screening</button>
+          <button 
+            className="btn btn-primary"
+            onClick={() => {
+              const servicesEl = document.querySelector('.services-section');
+              servicesEl?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Explore Our Services
+          </button>
+          <button className="btn btn-outline" onClick={openModal}>Book Your Free Initial Screening</button>
         </div>
       </div>
 

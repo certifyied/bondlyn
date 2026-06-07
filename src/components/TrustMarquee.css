@@ -1,0 +1,47 @@
+.trust-marquee-wrapper {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 0.75rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.trust-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 40s linear infinite;
+}
+
+.trust-marquee-wrapper:hover .trust-marquee-track {
+  animation-play-state: paused;
+}
+
+.trust-marquee-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.trust-item {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e5ede8; /* Soft white/sage tint */
+}
+
+.trust-icon {
+  color: var(--accent-pink, #ff9a9e); /* Add a pop of brand color to the checkmarks */
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

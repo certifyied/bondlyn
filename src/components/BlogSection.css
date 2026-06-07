@@ -1,0 +1,41 @@
+.blog-section {
+  background-color: var(--bg-creamy);
+}
+
+.blog-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.blog-prehead {
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.blog-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+}
+
+/* 
+  The external widget will inject its own styles inside #certifyied-blog-container,
+  but we can provide a min-height to prevent layout shifting before it loads.
+*/
+#certifyied-blog-container {
+  min-height: 400px;
+  width: 100%;
+}

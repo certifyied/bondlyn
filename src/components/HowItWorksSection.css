@@ -1,0 +1,522 @@
+.hiw-section {
+  background-color: var(--bg-creamy);
+}
+
+.hiw-header {
+  text-align: left;
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.hiw-prehead {
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.hiw-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+/* Flow Container */
+.hiw-flow-container {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(118, 146, 131, 0.2);
+  overflow: hidden;
+}
+
+/* Step Blocks */
+.step-block {
+  position: relative;
+}
+
+.step-block::before {
+  content: '';
+  position: absolute;
+  left: -1.35rem; /* center on the border */
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+/* Collapsible Regions */
+.step-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.step-collapsible.expanded {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.step-collapsible-inner {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Calculator & Form Styles */
+.calculator-wrapper {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.calc-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Phase 0: Setup */
+.calc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.calc-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.focus-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.focus-chip {
+  background-color: var(--bg-creamy);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.focus-chip:hover {
+  background-color: rgba(118, 146, 131, 0.1);
+}
+
+.focus-chip.selected {
+  background-color: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.calc-select {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--bg-creamy);
+  color: var(--text-dark);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.calc-select:focus {
+  outline: none;
+  border-color: var(--primary-green);
+}
+
+.range-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calc-range {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1); /* Darker track for visibility */
+  border-radius: 4px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.calc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #769283 !important; /* Force solid green */
+  cursor: pointer;
+  transition: transform 0.1s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Adds pop to the thumb */
+}
+
+.calc-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #769283 !important; /* Force solid green */
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.calc-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.range-value {
+  font-weight: 700;
+  color: var(--primary-green);
+  background: #f0fdf4;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Phase 1: Calculating */
+.calc-processing {
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.giant-spinner {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.processing-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.progress-bar-container {
+  width: 100%;
+  max-width: 400px;
+  height: 8px;
+  background-color: var(--bg-creamy);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--primary-green);
+  transition: width 0.1s linear;
+}
+
+.processing-subtext {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+
+/* Phase 2: Capture */
+.capture-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.lock-icon-wrapper {
+  background-color: #fffbeb;
+  color: #d97706;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.capture-header h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.capture-header p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+}
+
+/* General Form Styles */
+.form-group input:not([type="range"]) {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: var(--bg-creamy);
+}
+
+.form-group input:not([type="range"]):focus {
+  outline: none;
+  border-color: var(--primary-green);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+  .form-row .form-group {
+    flex: 1;
+  }
+}
+
+.btn-submit {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.form-error {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #166534;
+}
+
+.success-icon {
+  color: #22c55e;
+  margin: 0 auto 1rem auto;
+}
+
+.form-success h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Button for Step 2 */
+.btn-claim-screening {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.btn-claim-screening:hover {
+  transform: translateY(-2px);
+}
+
+/* Blur Reveal Overlay Styles */
+.steps-remainder-wrapper {
+  position: relative;
+  transition: max-height 0.8s ease;
+  overflow: hidden;
+}
+
+.steps-remainder-wrapper.is-blurred {
+  max-height: 260px;
+}
+
+.steps-remainder-wrapper.is-blurred .step-collapsible-inner {
+  filter: blur(5px);
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+}
+
+.steps-remainder-wrapper:not(.is-blurred) {
+  max-height: 2000px;
+}
+
+.blur-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  /* Stronger frosted glass effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 248, 245, 0) 0%,
+    rgba(250, 248, 245, 0.6) 25%,
+    rgba(250, 248, 245, 0.88) 55%,
+    rgba(250, 248, 245, 0.98) 80%,
+    rgba(250, 248, 245, 1) 100%
+  );
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 1.25rem;
+  z-index: 10;
+}
+
+/* Make the button stand out on top of the blur */
+.prominent-reveal {
+  background: #769283 !important; /* Explicit hex color instead of var() to bypass Safari backdrop-filter variable bugs */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(118, 146, 131, 0.4) !important;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+}
+
+.prominent-reveal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(118, 146, 131, 0.6) !important;
+  background: #1c2a23 !important; /* var(--text-dark) */
+}
+
+/* Reveal Button */
+.reveal-btn-wrapper {
+  padding-top: 1rem;
+}
+
+.btn-reveal {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-reveal:hover {
+  background-color: var(--primary-green);
+  color: #ffffff; /* Explicitly set to white for visibility */
+}

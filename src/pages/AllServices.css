@@ -1,0 +1,60 @@
+.all-services-page {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  background-color: var(--bg-creamy);
+  min-height: 100vh;
+}
+
+.all-services-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.all-services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.all-services-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+}
+
+/* The Grid Layout */
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Adjust card styles specifically for the grid context */
+.grid-card {
+  flex: none; /* override flex-basis from carousel */
+  width: 100%;
+  max-width: none; /* override max-width from carousel */
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    height: 320px;
+  }
+}

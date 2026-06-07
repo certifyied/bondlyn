@@ -1,6 +1,6 @@
 import React from 'react';
-import joyfulBoy from '../assets/joyful_boy.png';
-import joyfulGirl from '../assets/joyful_girl.png';
+import joyfulBoy from '../assets/joyful_boy.webp';
+import joyfulGirl from '../assets/joyful_girl.webp';
 import { useModal } from '../context/ModalContext';
 
 function FadeUpText({ text, delayStart = 0 }) {

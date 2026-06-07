@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import keralaKid1 from '../assets/kerala_kid_1.png';
-import keralaKid2 from '../assets/kerala_kid_2.png';
-import bondlynLogo from '../assets/bondlyn_logo.png';
-import puzzleSage from '../assets/puzzle_piece_sage.png';
-import puzzleBlue from '../assets/puzzle_piece_blue.png';
-import puzzleYellow from '../assets/puzzle_piece_yellow.png';
+import keralaKid1 from '../assets/kerala_kid_1.webp';
+import keralaKid2 from '../assets/kerala_kid_2.webp';
+import bondlynLogo from '../assets/bondlyn_logo.webp';
+import puzzleSage from '../assets/puzzle_piece_sage.webp';
+import puzzleBlue from '../assets/puzzle_piece_blue.webp';
+import puzzleYellow from '../assets/puzzle_piece_yellow.webp';
 
 export default function WhoWeAreSection() {
   return (

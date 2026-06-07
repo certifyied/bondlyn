@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/bondlyn_logo.png';
+import logo from '../assets/bondlyn_logo.webp';
 import './Footer.css';
 
 // Inline SVGs since lucide-react version doesn't include social icons

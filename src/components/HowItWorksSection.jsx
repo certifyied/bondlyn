@@ -150,7 +150,7 @@ System Details:
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="step-title">Step 1: Calculate Your Intervention Advantage</h3>
+            <h3 className="step-title">Step 1: Reach Out</h3>
             <p className="step-desc">
               Early support makes a lifetime of difference. Tell us about your child to generate a personalised roadmap.
             </p>
@@ -160,7 +160,7 @@ System Details:
                 <div className="form-success">
                   <CheckCircle2 size={48} className="success-icon" />
                   <h4>Your Roadmap is on its way!</h4>
-                  <p>We've received your details and will be in touch shortly to schedule your free screening and review your child's plan.</p>
+                  <p>We've received your details and will be in touch shortly to schedule your initial screening and review your child's plan.</p>
                 </div>
               ) : (
                 <>
@@ -257,7 +257,7 @@ System Details:
                       <div className="capture-header">
                         <div className="lock-icon-wrapper"><Lock size={20} /></div>
                         <h4>Your Action Plan is Ready</h4>
-                        <p>Enter your details to unlock your child's roadmap and claim your free screening session.</p>
+                        <p>Enter your details to unlock your child's roadmap and book your initial screening session.</p>
                       </div>
 
                       <div className="form-group">
@@ -296,15 +296,15 @@ System Details:
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
-            <h3 className="step-title">Step 2: Book Your Free Initial Screening</h3>
+            <h3 className="step-title">Step 2: Book Your Initial Screening</h3>
             
             <div className={`steps-remainder-wrapper ${!isRevealed ? 'is-blurred' : ''}`}>
               <p className="step-desc">
-                Our free screening provides an initial overview of your child's development and helps identify whether a further detailed assessment is recommended. It's a no-pressure first step.
+                Our initial screening provides an initial overview of your child's development and helps identify whether a further detailed assessment is recommended. It's a no-pressure first step.
               </p>
               
               <button className="btn-claim-screening" onClick={handleClaimScreening}>
-                Claim Free Screening
+                Book Initial Screening
               </button>
 
               <div className="step-collapsible-inner">

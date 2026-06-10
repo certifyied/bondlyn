@@ -5,10 +5,10 @@ import './StatsSection.css';
 export default function StatsSection() {
   const stats = [
     { number: "20+ Years", label: "of Serving Families" },
-    { number: "7,500+", label: "Children Supported" },
+    { number: "7.5k+", label: "Children Supported" },
     { number: "25+", label: "Specialist Therapists" },
-    { number: "4,800 sq ft", label: "Child-Friendly Space" },
-    { number: "270,000+", label: "Sessions Delivered" }
+    { number: "4.8k sq ft", label: "Child-Friendly Space" },
+    { number: "270k+", label: "Sessions Delivered" }
   ];
 
   return (

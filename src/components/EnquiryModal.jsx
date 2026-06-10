@@ -75,7 +75,7 @@ export default function EnquiryModal() {
       }
 
       const fullMessage = `
-Lead Details (Enquiry Modal - Free Screening):
+Lead Details (Enquiry Modal - Initial Screening):
 - Parent Name: ${formData.parentName}
 - Email: ${formData.email}
 - Phone: ${formData.phone}
@@ -92,7 +92,7 @@ System Details:
         sender_name: formData.parentName,
         sender_email: formData.email,
         phone_number: formData.phone,
-        subject: "Bondlyn Website - Free Screening Enquiry",
+        subject: "Bondlyn Website - Initial Screening Enquiry",
         message: fullMessage
       };
 
@@ -155,7 +155,7 @@ System Details:
             <CheckCircle2 size={64} className="modal-success-icon" />
             <h2 className="success-title">Enquiry Submitted!</h2>
             <p className="success-text">
-              We have received your details for the Free Screening. Our team will contact you shortly to schedule the session.
+              We have received your details for the Initial Screening. Our team will contact you shortly to schedule the session.
             </p>
             <button className="btn-modal-close" onClick={closeModal}>
               Close Window
@@ -165,11 +165,11 @@ System Details:
           <>
             <div className="dialog-header">
               <div className="lock-badge">
-                <Lock size={14} style={{ marginRight: '6px' }} /> Free Screening Request
+                <Lock size={14} style={{ marginRight: '6px' }} /> Initial Screening Request
               </div>
-              <h2 id="dialog-title" className="dialog-title">Claim Your Free Screening</h2>
+              <h2 id="dialog-title" className="dialog-title">Book Your Initial Screening</h2>
               <p className="dialog-subtitle">
-                Enter your details below, and our specialist therapists will contact you to arrange a free initial developmental overview.
+                Enter your details below, and our specialist therapists will contact you to arrange an initial developmental overview.
               </p>
             </div>
 
@@ -280,7 +280,7 @@ System Details:
                     <Loader2 className="spinner animate-spin" size={18} style={{ marginRight: '8px', display: 'inline-block' }} /> Submitting...
                   </>
                 ) : (
-                  'Claim Free Screening'
+                  'Book Initial Screening'
                 )}
               </button>
             </form>

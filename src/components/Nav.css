@@ -6,6 +6,7 @@
   justify-content: space-between;
   position: relative; /* explicitly non-fixed */
   z-index: 50;
+  clip-path: url(#nav-wave);
 }
 
 .nav-left, .nav-right {
@@ -124,11 +125,14 @@
   .hamburger-btn {
     display: none;
   }
+  .navbar {
+    padding: 1.25rem 2rem 2.5rem 2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem;
+    padding: 1rem 1rem 2.25rem 1rem;
   }
   .desktop-links {
     display: none;

@@ -5,10 +5,14 @@ import './EnquiryModal.css';
 
 const FOCUS_AREAS = [
   "Speech & Language",
-  "Behaviour & Emotions",
+  "Social Communication & Interaction",
+  "Behaviour, Attention & Emotions",
+  "Sensory Processing",
   "Motor Skills",
-  "Social Interaction",
-  "General Development"
+  "Learning & Academic Skills",
+  "Feeding & Eating Skills",
+  "Overall Development",
+  "I’m Not Sure / Need Professional Guidance"
 ];
 
 export default function EnquiryModal() {

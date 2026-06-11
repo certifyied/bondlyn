@@ -5,12 +5,15 @@ import { motion } from 'framer-motion';
 import './HowItWorksSection.css';
 
 const FOCUS_AREAS = [
-  "",
   "Speech & Language",
-  "Behaviour & Emotions",
+  "Social Communication & Interaction",
+  "Behaviour, Attention & Emotions",
+  "Sensory Processing",
   "Motor Skills",
-  "Social Interaction",
-  "General Development"
+  "Learning & Academic Skills",
+  "Feeding & Eating Skills",
+  "Overall Development",
+  "I’m Not Sure / Need Professional Guidance"
 ];
 
 export default function HowItWorksSection() {
@@ -22,8 +25,6 @@ export default function HowItWorksSection() {
   const [formData, setFormData] = useState({ 
     age: '', 
     focusArea: '',
-    currentCapacity: '2.5',
-    desiredCapacity: '4.5',
     name: '', 
     email: '', 
     phone: '' 
@@ -75,8 +76,6 @@ export default function HowItWorksSection() {
 Lead Details (Calculator):
 - Child's Age: ${formData.age}
 - Primary Focus Area: ${formData.focusArea}
-- Current Capacity Rating (1-5): ${formData.currentCapacity}
-- Desired Capacity Rating (1-5): ${formData.desiredCapacity}
 
 Contact Info:
 - Parent Name: ${formData.name}
@@ -200,39 +199,33 @@ System Details:
                       </div>
 
                       <div className="form-group">
-                        <label className="calc-label">On a scale of 1-5, what is their current capacity in complex tasks?</label>
-                        <div className="range-wrapper">
-                          <input 
-                            type="range" 
-                            name="currentCapacity" 
-                            min="1" max="5" step="0.1"
-                            value={formData.currentCapacity} 
-                            onChange={handleInputChange} 
-                            className="calc-range"
-                          />
-                          <span className="range-value">{Number(formData.currentCapacity).toFixed(1)}/5</span>
-                        </div>
+                        <label className="calc-label">Parent's Email Address <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
+                        <input 
+                          type="email" 
+                          name="email" 
+                          placeholder="e.g. parent@example.com" 
+                          value={formData.email} 
+                          onChange={handleInputChange} 
+                          required 
+                        />
                       </div>
 
                       <div className="form-group">
-                        <label className="calc-label">Where would you like their capacity to be in 6 months?</label>
-                        <div className="range-wrapper">
-                          <input 
-                            type="range" 
-                            name="desiredCapacity" 
-                            min="1" max="5" step="0.1"
-                            value={formData.desiredCapacity} 
-                            onChange={handleInputChange} 
-                            className="calc-range"
-                          />
-                          <span className="range-value">{Number(formData.desiredCapacity).toFixed(1)}/5</span>
-                        </div>
+                        <label className="calc-label">Parent's Phone Number <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
+                        <input 
+                          type="tel" 
+                          name="phone" 
+                          placeholder="e.g. +91 98765 43210" 
+                          value={formData.phone} 
+                          onChange={handleInputChange} 
+                          required 
+                        />
                       </div>
                       
                       <button 
                         type="submit" 
                         className="btn-submit" 
-                        disabled={!formData.age || !formData.focusArea}
+                        disabled={!formData.age || !formData.focusArea || !formData.email || !formData.phone}
                       >
                         Calculate Roadmap
                       </button>
@@ -257,19 +250,11 @@ System Details:
                       <div className="capture-header">
                         <div className="lock-icon-wrapper"><Lock size={20} /></div>
                         <h4>Your Action Plan is Ready</h4>
-                        <p>Enter your details to unlock your child's roadmap and book your initial screening session.</p>
+                        <p>Enter your name to unlock your child's roadmap and book your initial screening session.</p>
                       </div>
 
                       <div className="form-group">
                         <input type="text" name="name" placeholder="Parent's Name" value={formData.name} onChange={handleInputChange} required />
-                      </div>
-                      <div className="form-row">
-                        <div className="form-group">
-                          <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleInputChange} required />
-                        </div>
-                        <div className="form-group">
-                          <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleInputChange} />
-                        </div>
                       </div>
                       
                       {submitStatus && submitStatus !== 'success' && (

@@ -89,7 +89,7 @@ System Details:
 
   return (
     <main className="contact-page">
-      <SeoHeader title="Contact Us | Bondlyn" description="Get in touch with Bondlyn Child Development Centre Kozhikode. Book appointments and ask questions." />
+      <SeoHeader title="Contact Us | Bondlyn" description="Get in touch with Bondlyn Child Development Centre Kannur. Book appointments and ask questions." />
       
       <div className="contact-container">
         
@@ -114,7 +114,8 @@ System Details:
               </div>
               <div className="contact-detail-text">
                 <h4>Call Us</h4>
-                <a href="tel:+918078556606">+91 80785 56606</a>
+                <a href="tel:+917356403139">+91 73564 03139</a><br />
+                <a href="tel:+918921730594">+91 89217 30594</a>
               </div>
             </div>
 
@@ -124,7 +125,7 @@ System Details:
               </div>
               <div className="contact-detail-text">
                 <h4>Email Us</h4>
-                <a href="mailto:info@bondlyn.com">info@bondlyn.com</a>
+                <a href="mailto:bondlyncdc@gmail.com">bondlyncdc@gmail.com</a>
               </div>
             </div>
 
@@ -136,8 +137,7 @@ System Details:
                 <h4>Visit Us</h4>
                 <p>
                   Bondlyn Child Development Centre,<br />
-                  1st Floor, Near KSRTC,<br />
-                  Thamarassery, Kozhikode, Kerala - 673573
+                  Chettipedika, Kannur, Kerala - 670004
                 </p>
               </div>
             </div>
@@ -155,7 +155,7 @@ System Details:
 
           <div className="contact-info-footer">
             <h4>Location Note</h4>
-            <p>Our child-friendly centre is located right next to the KSRTC bus stand, Kozhikode, ensuring easy access for families across the region.</p>
+            <p>Our child-friendly centre is located in Chettipedika, Kannur, ensuring easy access for families across the region.</p>
           </div>
         </motion.div>
 
@@ -268,6 +268,25 @@ System Details:
         </motion.div>
 
       </div>
+
+      {/* Map Section */}
+      <motion.div 
+        className="contact-map-section"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+      >
+        <iframe
+          title="Bondlyn Location Map"
+          src="https://maps.google.com/maps?q=Bondlyn%20Child%20Development%20Centre%20Chettipedika%20Kannur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="450"
+          style={{ border: 0, borderRadius: '24px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </motion.div>
     </main>
   );
 }

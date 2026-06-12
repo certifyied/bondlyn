@@ -68,11 +68,18 @@ export default function CtaBlock() {
           <div className="cta-buttons">
             <button className="btn-cta-primary" onClick={openModal}>Book a Consultation</button>
             <a 
-              href="tel:+918078556606" 
+              href="tel:+917356403139" 
               className="btn-cta-secondary"
               style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
             >
-              Call Us Today
+              Call 73564 03139
+            </a>
+            <a 
+              href="tel:+918921730594" 
+              className="btn-cta-secondary"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
+            >
+              Call 89217 30594
             </a>
           </div>
         </motion.div>

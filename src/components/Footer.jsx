@@ -82,22 +82,57 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        {/* Brand */}
-        <div className="footer-brand">
-          <img src={logo} alt="Bondlyn Logo" className="footer-logo" />
-          <p className="footer-tagline">
-            Every child has something extraordinary inside. We help it come out.
-          </p>
-        </div>
+        <div className="footer-grid">
+          {/* Column 1: Brand & Contact Info */}
+          <div className="footer-column footer-brand-col">
+            <img src={logo} alt="Bondlyn Logo" className="footer-logo" />
+            <p className="footer-tagline" style={{ textAlign: 'left', margin: '0 0 1.5rem 0' }}>
+              Every child has something extraordinary inside. We help it come out.
+            </p>
+            <div className="footer-contact-info">
+              <p><strong>Address:</strong> Chettipedika, Kannur, Kerala - 670004</p>
+              <p><strong>Email:</strong> <a href="mailto:bondlyncdc@gmail.com">bondlyncdc@gmail.com</a></p>
+              <p><strong>Mob:</strong> <a href="tel:+917356403139">73564 03139</a>, <a href="tel:+918921730594">89217 30594</a></p>
+            </div>
+          </div>
 
-        {/* Nav Links */}
-        <ul className="footer-nav">
-          {NAV_LINKS.map(link => (
-            <li key={link.label}>
-              <Link to={link.to}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
+          {/* Column 2: Navigation Links */}
+          <div className="footer-column footer-links-col">
+            <h4>Quick Links</h4>
+            <ul className="footer-nav-vertical">
+              {NAV_LINKS.map(link => (
+                <li key={link.label}>
+                  <Link to={link.to}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Map Embed */}
+          <div className="footer-column footer-map-col">
+            <h4>Our Location</h4>
+            <div className="footer-map-container">
+              <iframe
+                title="Bondlyn Location Map"
+                src="https://maps.google.com/maps?q=Bondlyn%20Child%20Development%20Centre%20Chettipedika%20Kannur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="150"
+                style={{ border: 0, borderRadius: '12px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a 
+                href="https://maps.app.goo.gl/UXRkq4e3B8YyVcVt5?g_st=aw" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="view-map-link"
+              >
+                View on Google Maps &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Social Pills */}
         <div className="footer-socials">

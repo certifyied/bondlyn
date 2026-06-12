@@ -264,3 +264,15 @@
   color: #b91c1c;
   font-size: 0.9rem;
 }
+
+.contact-map-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-map-section {
+    margin-top: 2.5rem;
+  }
+}

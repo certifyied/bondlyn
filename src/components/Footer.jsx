@@ -87,7 +87,9 @@ export default function Footer() {
           <div className="footer-column footer-brand-col">
             <img src={logo} alt="Bondlyn Logo" className="footer-logo" />
             <p className="footer-tagline" style={{ textAlign: 'left', margin: '0 0 1.5rem 0' }}>
-              Every child has something extraordinary inside. We help it come out.
+              Every Child Has Something<br />
+              Extraordinary Inside.<br />
+              We Help It Come Out.
             </p>
             <div className="footer-contact-info">
               <p><strong>Address:</strong> Chettipedika, Kannur, Kerala - 670004</p>

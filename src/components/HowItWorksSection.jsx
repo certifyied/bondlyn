@@ -25,6 +25,7 @@ export default function HowItWorksSection() {
   const [formData, setFormData] = useState({ 
     age: '', 
     focusArea: '',
+    concernLevel: '3.0',
     name: '', 
     email: '', 
     phone: '' 
@@ -76,6 +77,7 @@ export default function HowItWorksSection() {
 Lead Details (Calculator):
 - Child's Age: ${formData.age}
 - Primary Focus Area: ${formData.focusArea}
+- Concern Level (1-5): ${formData.concernLevel || '3.0'}
 
 Contact Info:
 - Parent Name: ${formData.name}
@@ -196,6 +198,21 @@ System Details:
                             <option key={area} value={area}>{area}</option>
                           ))}
                         </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label className="calc-label">On a scale of 1-5, how concerned are you about this area? <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
+                        <div className="range-wrapper">
+                          <input 
+                            type="range" 
+                            name="concernLevel" 
+                            min="1" max="5" step="0.5"
+                            value={formData.concernLevel || '3.0'} 
+                            onChange={handleInputChange} 
+                            className="calc-range"
+                          />
+                          <span className="range-value">{Number(formData.concernLevel || 3.0).toFixed(1)}/5</span>
+                        </div>
                       </div>
 
                       <div className="form-group">

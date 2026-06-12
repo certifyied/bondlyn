@@ -17,30 +17,32 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="navbar">
-        {/* Left: Hamburger */}
-        <div className="nav-left">
-          <button className="hamburger-btn" onClick={toggleMenu} aria-label="Toggle menu">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+      <div className="nav-container">
+        <nav className="navbar">
+          {/* Left: Hamburger */}
+          <div className="nav-left">
+            <button className="hamburger-btn" onClick={toggleMenu} aria-label="Toggle menu">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
 
-        {/* Center: Logo */}
-        <div className="nav-center">
-          <Link to="/" onClick={closeMenu}>
-            <img src={logo} alt="Bondlyn Logo" className="nav-logo" />
-          </Link>
-        </div>
+          {/* Center: Logo */}
+          <div className="nav-center">
+            <Link to="/" onClick={closeMenu}>
+              <img src={logo} alt="Bondlyn Logo" className="nav-logo" />
+            </Link>
+          </div>
 
-        {/* Right: Empty for balance, or desktop links */}
-        <div className="nav-right">
-          <ul className="desktop-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </div>
+          {/* Right: Empty for balance, or desktop links */}
+          <div className="nav-right">
+            <ul className="desktop-links">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+        </nav>
 
         {/* Mobile Slide-down Menu */}
         {isOpen && (
@@ -51,7 +53,7 @@ export default function Nav() {
             <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
           </div>
         )}
-      </nav>
+      </div>
 
       {/* SVG ClipPath for wavy desktop navbar */}
       <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }}>

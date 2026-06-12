@@ -1,3 +1,9 @@
+.nav-container {
+  position: relative;
+  width: 100%;
+  z-index: 100; /* Ensure header is always on top of page content */
+}
+
 .navbar {
   background-color: #769283;
   padding: 1rem 2rem;
@@ -5,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative; /* explicitly non-fixed */
-  z-index: 50;
+  z-index: 10; /* Higher than mobile-menu */
   clip-path: url(#nav-wave);
 }
 
@@ -77,15 +83,15 @@
 /* Mobile Dropdown Menu */
 .mobile-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1.5rem); /* Pull it up behind the wavy border */
   left: 0;
   width: 100%;
   background-color: #5d7569; /* Slightly darker shade of the green for contrast */
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem 1.5rem 2rem; /* Add top padding to account for the wave overlap */
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 1000;
+  z-index: 5; /* Behind the wavy navbar background */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transform-origin: top;
   animation: slideDown 0.3s ease forwards;

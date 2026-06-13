@@ -18,7 +18,7 @@ export default function Home() {
       <SeoHeader title="Home" description="Every Child Has Something Extraordinary Inside. We Help It Come Out." />
       <HeroSection />
       <WhoWeAreSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <ServicesSection />
       <WhoCanBenefitSection />
       <WhyBondlynSection />

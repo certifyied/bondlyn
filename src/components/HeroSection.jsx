@@ -4,21 +4,48 @@ import joyfulGirl from '../assets/joyful_girl.webp';
 import { useModal } from '../context/ModalContext';
 
 function FadeUpText({ text, delayStart = 0 }) {
+  let globalCharIndex = 0;
+  const parts = text.split(/(\s+)/);
+
   return (
-    <span style={{ display: 'inline-block' }}>
-      {text.split('').map((char, i) => (
-        <span
-          key={i}
-          style={{
-            display: 'inline-block',
-            opacity: 0,
-            animation: `slideUpFade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards ${delayStart + i * 0.015}s`
-          }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </span>
-      ))}
-    </span>
+    <>
+      {parts.map((part, partIdx) => {
+        if (!part) return null;
+
+        const isWhitespace = /^\s+$/.test(part);
+
+        if (isWhitespace) {
+          globalCharIndex += part.length;
+          return (
+            <span key={partIdx}>
+              {part.replace(/\s/g, '\u00A0')}
+            </span>
+          );
+        }
+
+        const chars = part.split('');
+        return (
+          <span key={partIdx} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+            {chars.map((char, charIdx) => {
+              const delay = delayStart + globalCharIndex * 0.015;
+              globalCharIndex++;
+              return (
+                <span
+                  key={charIdx}
+                  style={{
+                    display: 'inline-block',
+                    opacity: 0,
+                    animation: `slideUpFade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards ${delay}s`
+                  }}
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
+    </>
   );
 }
 

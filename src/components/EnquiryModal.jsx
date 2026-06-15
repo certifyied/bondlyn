@@ -26,6 +26,7 @@ export default function EnquiryModal() {
     childName: '',
     childAge: '',
     focusArea: '',
+    consultationMode: '',
     notes: ''
   });
   
@@ -86,6 +87,7 @@ Lead Details (Enquiry Modal - Initial Screening):
 - Child's Name: ${formData.childName}
 - Child's Age: ${formData.childAge || 'N/A'}
 - Primary Focus Area: ${formData.focusArea || 'N/A'}
+- Preferred Mode: ${formData.consultationMode || 'N/A'}
 - Additional Notes: ${formData.notes || 'N/A'}
 
 System Details:
@@ -118,6 +120,7 @@ System Details:
           childName: '',
           childAge: '',
           focusArea: '',
+          consultationMode: '',
           notes: ''
         });
       } else {
@@ -256,6 +259,22 @@ System Details:
                     {FOCUS_AREAS.map(area => (
                       <option key={area} value={area}>{area}</option>
                     ))}
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="consultationMode">Preferred Mode <span className="req">*</span></label>
+                  <select
+                    id="consultationMode"
+                    name="consultationMode"
+                    className="modal-select"
+                    value={formData.consultationMode}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" disabled>Select mode...</option>
+                    <option value="Online">Online Consultation</option>
+                    <option value="Offline">Offline (In-centre at Kannur)</option>
                   </select>
                 </div>
               </div>

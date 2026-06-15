@@ -26,6 +26,7 @@ export default function HowItWorksSection() {
     age: '', 
     focusArea: '',
     concernLevel: '3.0',
+    preferredMode: '',
     name: '', 
     email: '', 
     phone: '' 
@@ -42,7 +43,7 @@ export default function HowItWorksSection() {
 
   const handleCalculate = (e) => {
     e.preventDefault();
-    if (!formData.age || !formData.focusArea) return;
+    if (!formData.age || !formData.focusArea || !formData.preferredMode) return;
     
     setCalcPhase('calculating');
     let progress = 0;
@@ -78,6 +79,7 @@ Lead Details (Calculator):
 - Child's Age: ${formData.age}
 - Primary Focus Area: ${formData.focusArea}
 - Concern Level (1-5): ${formData.concernLevel || '3.0'}
+- Preferred Mode: ${formData.preferredMode}
 
 Contact Info:
 - Parent Name: ${formData.name}
@@ -238,11 +240,27 @@ System Details:
                           required 
                         />
                       </div>
+
+                      <div className="form-group">
+                        <label className="calc-label">Preferred Mode <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
+                        <select 
+                          name="preferredMode" 
+                          className="calc-select"
+                          value={formData.preferredMode} 
+                          onChange={handleInputChange} 
+                          required
+                        >
+                          <option value="" disabled>Select mode...</option>
+                          <option value="Online">Online Consultation</option>
+                          <option value="Offline">Offline (In-Centre at Kannur)</option>
+                          <option value="Both">Both (Hybrid)</option>
+                        </select>
+                      </div>
                       
                       <button 
                         type="submit" 
                         className="btn-submit" 
-                        disabled={!formData.age || !formData.focusArea || !formData.email || !formData.phone}
+                        disabled={!formData.age || !formData.focusArea || !formData.email || !formData.phone || !formData.preferredMode}
                       >
                         Calculate Roadmap
                       </button>
@@ -302,7 +320,7 @@ System Details:
             
             <div className={`steps-remainder-wrapper ${!isRevealed ? 'is-blurred' : ''}`}>
               <p className="step-desc">
-                Our initial screening provides an initial overview of your child's development and helps identify whether a further detailed assessment is recommended. It's a no-pressure first step.
+                Our initial screening (available both online and offline) provides an initial overview of your child's development and helps identify whether a further detailed assessment is recommended. It's a no-pressure first step.
               </p>
               
               <button className="btn-claim-screening" onClick={handleClaimScreening}>
@@ -311,21 +329,28 @@ System Details:
 
               <div className="step-collapsible-inner">
                 <div className="step-block">
-                  <h3 className="step-title">Step 3: Personalised Plan</h3>
+                  <h3 className="step-title">Step 3: Detailed Assessment</h3>
+                  <p className="step-desc">
+                    If recommended, our specialist therapists conduct a comprehensive, detailed assessment (available online or in-centre/offline) to understand your child's specific developmental profile.
+                  </p>
+                </div>
+
+                <div className="step-block">
+                  <h3 className="step-title">Step 4: Personalised Plan</h3>
                   <p className="step-desc">
                     We build a therapy plan with clear goals, the right team, and a realistic timeline designed specifically for your child.
                   </p>
                 </div>
 
                 <div className="step-block">
-                  <h3 className="step-title">Step 4: Therapy Begins</h3>
+                  <h3 className="step-title">Step 5: Therapy Begins</h3>
                   <p className="step-desc">
-                    Sessions start in our warm, child-friendly centre or online—whichever works best for your family.
+                    Sessions start in our warm, child-friendly centre (offline) or online—whichever works best for your family.
                   </p>
                 </div>
 
                 <div className="step-block">
-                  <h3 className="step-title">Step 5: Progress You Can See</h3>
+                  <h3 className="step-title">Step 6: Progress You Can See</h3>
                   <p className="step-desc">
                     We track every milestone and share regular updates so you always know how your child is growing.
                   </p>

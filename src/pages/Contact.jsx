@@ -9,6 +9,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
+    preferredMode: '',
     subject: '',
     message: ''
   });
@@ -42,6 +43,7 @@ Message from Contact Form:
 - Sender Name: ${formData.name}
 - Email: ${formData.email}
 - Phone: ${formData.phone || 'N/A'}
+- Preferred Mode: ${formData.preferredMode || 'N/A'}
 - Subject: ${formData.subject}
 - Message:
 ${formData.message}
@@ -72,6 +74,7 @@ System Details:
           name: '',
           email: '',
           phone: '',
+          preferredMode: '',
           subject: '',
           message: ''
         });
@@ -219,6 +222,22 @@ System Details:
                       onChange={handleInputChange}
                     />
                   </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="preferredMode">Preferred Mode <span className="req">*</span></label>
+                  <select
+                    id="preferredMode"
+                    name="preferredMode"
+                    value={formData.preferredMode}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" disabled>Select mode...</option>
+                    <option value="Online">Online Consultation</option>
+                    <option value="Offline">Offline (In-centre at Kannur)</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
                 </div>
 
                 <div className="form-group">

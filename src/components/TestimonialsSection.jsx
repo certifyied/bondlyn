@@ -15,16 +15,6 @@ const TESTIMONIALS = [
     service: "Speech Therapy"
   },
   {
-    text: "What I love most is that they keep us in the loop. I know what goals we're working on, I know what to do at home, and I know when something has improved. There's no guessing. The progress is visible, and that gives me so much peace.",
-    author: "Parent of a 6-year-old",
-    service: "ABA & OT"
-  },
-  {
-    text: "My daughter was very withdrawn and struggled with sensory issues. Within a few weeks at Bondlyn, I started seeing a completely different child—more playful, more present, more herself. I'm so grateful we found this place.",
-    author: "Parent of a 5-year-old",
-    service: "Occupational Therapy"
-  },
-  {
     text: "Even the online sessions were brilliant. We were nervous it wouldn't be as effective, but the therapist connected with our son from day one. He actually looks forward to his sessions—which I never expected.",
     author: "Parent of a 7-year-old",
     service: "Online Therapy"

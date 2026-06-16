@@ -10,6 +10,11 @@ const TESTIMONIALS = [
     service: "Speech Therapy"
   },
   {
+    text: "We started speech therapy for our son at the age of 2 due to speech delay. Our therapist Sana mam was incredibly patient, caring, and dedicated throughout the journey. With her guidance and support, our son's speech improved remarkably, and by the age of 2 years and 3 months, he was speaking well. For our family, Sana was truly a blessing from God. We are forever grateful for her support and dedication.",
+    author: "Sreya K., Parent of a 2-year-old",
+    service: "Speech Therapy"
+  },
+  {
     text: "What I love most is that they keep us in the loop. I know what goals we're working on, I know what to do at home, and I know when something has improved. There's no guessing. The progress is visible, and that gives me so much peace.",
     author: "Parent of a 6-year-old",
     service: "ABA & OT"
@@ -23,6 +28,11 @@ const TESTIMONIALS = [
     text: "Even the online sessions were brilliant. We were nervous it wouldn't be as effective, but the therapist connected with our son from day one. He actually looks forward to his sessions—which I never expected.",
     author: "Parent of a 7-year-old",
     service: "Online Therapy"
+  },
+  {
+    text: "Thank you to Lamia’s speech therapist for helping her with her basic vocabulary through therapy sessions. As parents we can see the progress and lamia’s steady improvement in communication with her loved ones. Your patience and creative sessions has helped Lamia find her voice and true potential. Your dedication is the best thing that has happened in her.",
+    author: "Parents of Lamia",
+    service: "Speech Therapy"
   }
 ];
 

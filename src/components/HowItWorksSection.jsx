@@ -324,7 +324,7 @@ System Details:
               </p>
               
               <button className="btn-claim-screening" onClick={handleClaimScreening}>
-                Book Initial Screening
+                Book your free initial screening
               </button>
 
               <div className="step-collapsible-inner">

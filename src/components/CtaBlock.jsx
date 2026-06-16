@@ -74,13 +74,6 @@ export default function CtaBlock() {
             >
               Call 73564 03139
             </a>
-            <a 
-              href="tel:+918921730594" 
-              className="btn-cta-secondary"
-              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}
-            >
-              Call 89217 30594
-            </a>
           </div>
         </motion.div>
 

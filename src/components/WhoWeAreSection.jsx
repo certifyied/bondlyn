@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import keralaKid1 from '../assets/kerala_kid_1.webp';
 import keralaKid2 from '../assets/kerala_kid_2.webp';
-import bondlynLogo from '../assets/bondlyn_logo.webp';
+import bondlynLogo2 from '../assets/bondlyn_logo2.webp';
 import puzzleSage from '../assets/puzzle_piece_sage.webp';
 import puzzleBlue from '../assets/puzzle_piece_blue.webp';
 import puzzleYellow from '../assets/puzzle_piece_yellow.webp';
@@ -32,7 +32,7 @@ export default function WhoWeAreSection() {
 
           {/* Center Logo Bubble */}
           <div className="wwa-center-logo">
-            <img src={bondlynLogo} alt="Bondlyn Logo" />
+            <img src={bondlynLogo2} alt="Bondlyn Logo" />
           </div>
 
           {/* Floating Puzzle Pieces (3D Images) */}

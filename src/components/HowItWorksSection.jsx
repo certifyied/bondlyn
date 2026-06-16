@@ -316,7 +316,7 @@ System Details:
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
-            <h3 className="step-title">Step 2: Book Your Initial Screening</h3>
+            <h3 className="step-title">Step 2: Book your free initial screening</h3>
             
             <div className={`steps-remainder-wrapper ${!isRevealed ? 'is-blurred' : ''}`}>
               <p className="step-desc">

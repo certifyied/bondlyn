@@ -83,7 +83,7 @@ export default function HeroSection() {
           >
             Explore Our Services
           </button>
-          <button className="btn btn-outline" onClick={openModal}>Book Your Initial Screening</button>
+          <button className="btn btn-outline" onClick={openModal}>Book your free initial screening</button>
         </div>
       </div>
 

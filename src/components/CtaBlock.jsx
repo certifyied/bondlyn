@@ -66,7 +66,7 @@ export default function CtaBlock() {
             Let's start with a simple conversation.
           </p>
           <div className="cta-buttons">
-            <button className="btn-cta-primary" onClick={openModal}>Book Free Screening</button>
+            <button className="btn-cta-primary" onClick={openModal}>Book your free initial screening</button>
             <a 
               href="tel:+917356403139" 
               className="btn-cta-secondary"

@@ -5,11 +5,6 @@ import './TestimonialsSection.css';
 
 const TESTIMONIALS = [
   {
-    text: "ഞങ്ങൾ ആദ്യം ബോണ്ട്‌ലിനിൽ എത്തുമ്പോൾ എന്റെ മകന് ഒരു വാക്കുപോലും സംസാരിക്കാൻ കഴിഞ്ഞിരുന്നില്ല. ആറുമാസത്തിനുശേഷം, അവന് ആവശ്യമുള്ളതെല്ലാം പൂർണ്ണ വാക്യങ്ങളിൽ അവൻ ചോദിക്കുന്നു. അതിനെക്കുറിച്ച് ചിന്തിക്കുമ്പോൾ എനിക്കിപ്പോഴും കണ്ണുനിറയും. ഈ ടീം എന്റെ കുട്ടിയെ ചികിത്സിക്കുക മാത്രമല്ല ചെയ്തത്; ഞാൻ അവനിൽ വിശ്വസിക്കാൻ പഠിക്കുന്നതിന് മുമ്പേ അവർ അവനിൽ വിശ്വസിച്ചു.",
-    author: "Parent of a 4-year-old",
-    service: "Speech Therapy"
-  },
-  {
     text: "We started speech therapy for our son at the age of 2 due to speech delay. Our therapist Sana mam was incredibly patient, caring, and dedicated throughout the journey. With her guidance and support, our son's speech improved remarkably, and by the age of 2 years and 3 months, he was speaking well. For our family, Sana was truly a blessing from God. We are forever grateful for her support and dedication.",
     author: "Sreya K., Parent of a 2-year-old",
     service: "Speech Therapy"

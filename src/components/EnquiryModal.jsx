@@ -174,7 +174,7 @@ System Details:
               <div className="lock-badge">
                 <Lock size={14} style={{ marginRight: '6px' }} /> Initial Screening Request
               </div>
-              <h2 id="dialog-title" className="dialog-title">Book Your Initial Screening</h2>
+              <h2 id="dialog-title" className="dialog-title">Book your free initial screening</h2>
               <p className="dialog-subtitle">
                 Enter your details below, and our specialist therapists will contact you to arrange an initial developmental overview.
               </p>
@@ -303,7 +303,7 @@ System Details:
                     <Loader2 className="spinner animate-spin" size={18} style={{ marginRight: '8px', display: 'inline-block' }} /> Submitting...
                   </>
                 ) : (
-                  'Book Initial Screening'
+                  'Book your free initial screening'
                 )}
               </button>
             </form>

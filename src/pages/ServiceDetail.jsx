@@ -53,7 +53,7 @@ export default function ServiceDetail() {
             More detailed information about this therapy will be updated here. We work with each family to tailor this service perfectly to your child's needs.
           </p>
           <div className="service-actions">
-            <button className="btn-primary" onClick={openModal}>Book a Consultation</button>
+            <button className="btn-primary" onClick={openModal}>Book Free Screening</button>
             <Link to="/" className="btn-secondary">Back to Home</Link>
           </div>
         </div>

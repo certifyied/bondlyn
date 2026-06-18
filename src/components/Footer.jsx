@@ -160,9 +160,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Bondlyn Child Development Centre. All rights reserved.
           </p>
           <p className="footer-credit">
-            Developed with <span className="heart">♥</span> by{' '}
-            <a href="https://certifyied.com" target="_blank" rel="noopener noreferrer">
-              Certifyied
+            Developed / Designed by{' '}
+            <a href="#" rel="noopener noreferrer">
+              Lumo
             </a>
           </p>
         </div>

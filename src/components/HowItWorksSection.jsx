@@ -262,7 +262,7 @@ System Details:
                         className="btn-submit" 
                         disabled={!formData.age || !formData.focusArea || !formData.email || !formData.phone || !formData.preferredMode}
                       >
-                        Calculate Roadmap
+                        Get Personalised Guidance
                       </button>
                     </form>
                   )}
@@ -360,7 +360,7 @@ System Details:
               {!isRevealed && (
                 <div className="blur-overlay">
                   <button className="btn-reveal prominent-reveal" onClick={() => setIsRevealed(true)}>
-                    Reveal More Steps <ChevronDown size={20} />
+                    Explore Next Steps <ChevronDown size={20} />
                   </button>
                 </div>
               )}

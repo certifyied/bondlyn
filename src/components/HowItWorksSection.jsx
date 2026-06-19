@@ -21,20 +21,20 @@ export default function HowItWorksSection() {
   const [isRevealed, setIsRevealed] = useState(false);
   const [calcPhase, setCalcPhase] = useState('setup'); // 'setup' | 'calculating' | 'capture'
   const [calcProgress, setCalcProgress] = useState(0);
-  
-  const [formData, setFormData] = useState({ 
-    age: '', 
+
+  const [formData, setFormData] = useState({
+    age: '',
     focusArea: '',
     concernLevel: '3.0',
     preferredMode: '',
-    name: '', 
-    email: '', 
-    phone: '' 
+    name: '',
+    email: '',
+    phone: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' or error string
-  
+
   const step1Ref = useRef(null);
 
   const handleInputChange = (e) => {
@@ -44,7 +44,7 @@ export default function HowItWorksSection() {
   const handleCalculate = (e) => {
     e.preventDefault();
     if (!formData.age || !formData.focusArea || !formData.preferredMode) return;
-    
+
     setCalcPhase('calculating');
     let progress = 0;
     const interval = setInterval(() => {
@@ -129,7 +129,7 @@ System Details:
   return (
     <section className="hiw-section">
       <div className="section-wrapper">
-        <motion.div 
+        <motion.div
           className="hiw-header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,10 +143,10 @@ System Details:
         </motion.div>
 
         <div className="hiw-flow-container">
-          
+
           {/* STEP 1: CALCULATOR */}
-          <motion.div 
-            className="step-block" 
+          <motion.div
+            className="step-block"
             ref={step1Ref}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ System Details:
             <p className="step-desc">
               Early support makes a lifetime of difference. Tell us about your child to generate a personalised roadmap.
             </p>
-            
+
             <div className="calculator-wrapper">
               {submitStatus === 'success' ? (
                 <div className="form-success">
@@ -170,29 +170,26 @@ System Details:
                   {/* PHASE 0: SETUP */}
                   {calcPhase === 'setup' && (
                     <form onSubmit={handleCalculate} className="calc-phase calc-setup fade-in">
-                      <div className="calc-header">
-                        <span>Developmental Priority Engine</span>
-                      </div>
-                      
+
                       <div className="form-group">
                         <label className="calc-label">What is your child's age?</label>
-                        <input 
-                          type="text" 
-                          name="age" 
-                          placeholder="e.g. 4 years old" 
-                          value={formData.age} 
-                          onChange={handleInputChange} 
-                          required 
+                        <input
+                          type="text"
+                          name="age"
+                          placeholder="e.g. 4 years old"
+                          value={formData.age}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
 
                       <div className="form-group">
                         <label className="calc-label">What is your primary area of focus?</label>
-                        <select 
-                          name="focusArea" 
+                        <select
+                          name="focusArea"
                           className="calc-select"
-                          value={formData.focusArea} 
-                          onChange={handleInputChange} 
+                          value={formData.focusArea}
+                          onChange={handleInputChange}
                           required
                         >
                           <option value="" disabled>Select an area...</option>
@@ -205,12 +202,12 @@ System Details:
                       <div className="form-group">
                         <label className="calc-label">On a scale of 1-5, how concerned are you about this area? <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
                         <div className="range-wrapper">
-                          <input 
-                            type="range" 
-                            name="concernLevel" 
+                          <input
+                            type="range"
+                            name="concernLevel"
                             min="1" max="5" step="0.5"
-                            value={formData.concernLevel || '3.0'} 
-                            onChange={handleInputChange} 
+                            value={formData.concernLevel || '3.0'}
+                            onChange={handleInputChange}
                             className="calc-range"
                           />
                           <span className="range-value">{Number(formData.concernLevel || 3.0).toFixed(1)}/5</span>
@@ -219,35 +216,35 @@ System Details:
 
                       <div className="form-group">
                         <label className="calc-label">Parent's Email Address <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
-                        <input 
-                          type="email" 
-                          name="email" 
-                          placeholder="e.g. parent@example.com" 
-                          value={formData.email} 
-                          onChange={handleInputChange} 
-                          required 
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="e.g. parent@example.com"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
 
                       <div className="form-group">
                         <label className="calc-label">Parent's Phone Number <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
-                        <input 
-                          type="tel" 
-                          name="phone" 
-                          placeholder="e.g. +91 98765 43210" 
-                          value={formData.phone} 
-                          onChange={handleInputChange} 
-                          required 
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="e.g. +91 98765 43210"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
 
                       <div className="form-group">
                         <label className="calc-label">Preferred Mode <span style={{ color: 'var(--accent-pink)' }}>*</span></label>
-                        <select 
-                          name="preferredMode" 
+                        <select
+                          name="preferredMode"
                           className="calc-select"
-                          value={formData.preferredMode} 
-                          onChange={handleInputChange} 
+                          value={formData.preferredMode}
+                          onChange={handleInputChange}
                           required
                         >
                           <option value="" disabled>Select mode...</option>
@@ -256,10 +253,10 @@ System Details:
                           <option value="Both">Both (Hybrid)</option>
                         </select>
                       </div>
-                      
-                      <button 
-                        type="submit" 
-                        className="btn-submit" 
+
+                      <button
+                        type="submit"
+                        className="btn-submit"
                         disabled={!formData.age || !formData.focusArea || !formData.email || !formData.phone || !formData.preferredMode}
                       >
                         Get Personalised Guidance
@@ -291,13 +288,13 @@ System Details:
                       <div className="form-group">
                         <input type="text" name="name" placeholder="Parent's Name" value={formData.name} onChange={handleInputChange} required />
                       </div>
-                      
+
                       {submitStatus && submitStatus !== 'success' && (
                         <div className="form-error">
                           <strong>Failed to Submit:</strong> {submitStatus}
                         </div>
                       )}
-                      
+
                       <button type="submit" className="btn-submit" disabled={isSubmitting}>
                         {isSubmitting ? <><Loader2 className="spinner" size={18} /> Sending...</> : 'Unlock My Roadmap'}
                       </button>
@@ -309,7 +306,7 @@ System Details:
           </motion.div>
 
           {/* STEP 2 AND BEYOND */}
-          <motion.div 
+          <motion.div
             className="step-block"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -317,12 +314,12 @@ System Details:
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
             <h3 className="step-title">Step 2: Book your free initial screening</h3>
-            
+
             <div className={`steps-remainder-wrapper ${!isRevealed ? 'is-blurred' : ''}`}>
               <p className="step-desc">
                 Our initial screening (available both online and offline) provides an initial overview of your child's development and helps identify whether a further detailed assessment is recommended. It's a no-pressure first step.
               </p>
-              
+
               <button className="btn-claim-screening" onClick={handleClaimScreening}>
                 Book your free initial screening
               </button>

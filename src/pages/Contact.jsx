@@ -151,7 +151,10 @@ System Details:
               </div>
               <div className="contact-detail-text">
                 <h4>Working Hours</h4>
-                <p>Mon - Sat: 9:00 AM - 6:00 PM<br />Sunday: Closed</p>
+                <p>
+                  Mon - Sun: 9:00 AM - 5:00 PM<br />
+                  Speech Therapy: 9:00 AM - 7:30 PM
+                </p>
               </div>
             </div>
           </div>
